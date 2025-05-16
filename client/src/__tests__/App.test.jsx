@@ -1,16 +1,19 @@
 import { render, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
 import App from '../App';
 
-describe('Componente App', () => {
-  test('renderiza el título principal', () => {
-    render(<App />);
-    const heading = screen.getByRole('heading', { name: /react beer ecommerce challenge/i });
-    expect(heading).toBeInTheDocument();
-  });
+describe('App Component', () => {
+  test('renders product page title', async () => {
+    render(
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    );
 
-  test('renderiza el párrafo con el texto "Hello World"', () => {
-    render(<App />);
-    const paragraph = screen.getByText(/hello world/i);
-    expect(paragraph).toBeInTheDocument();
+    const heading = await screen.findByRole('heading', {
+      name: /our products/i,
+    });
+
+    expect(heading).toBeInTheDocument();
   });
 });
