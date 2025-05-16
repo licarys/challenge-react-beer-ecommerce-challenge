@@ -1,14 +1,13 @@
-import './App.scss'
+import { Routes, Route, Navigate } from 'react-router-dom';
+import ProductListPage from './pages/ProductListPage';
 
 function App() {
   return (
-    <>
-      <h1>React Beer Ecommerce Challenge</h1>
-      <div>
-        <p>Hello World</p>
-      </div>
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<Navigate to="/products" />} />
+      <Route path="/products" element={<ProductListPage />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;

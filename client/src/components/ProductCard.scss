@@ -1,0 +1,57 @@
+@use '../styles/variables' as vars;
+
+.product-card {
+  background: white;
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .product-image {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  .product-name {
+    font-size: 1rem;
+    margin: 0.25rem 0;
+    font-weight: 500;
+    color: vars.$dark-color;
+  }
+
+  .product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .product-price {
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .add-button {
+      border: none;
+      cursor: pointer;
+      height: 40px;
+      width: 40px;
+      padding: 0;
+      background: none;
+
+      img {
+        height: 100%;
+        width: 100%;
+        transition: transform 0.2s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

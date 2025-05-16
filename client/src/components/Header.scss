@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: transparent;
+
+    .menu-btn {
+        background-color: transparent;
+        border: none;
+        padding: 0.5rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:focus {
+            outline: none;
+        }
+
+        svg rect {
+            fill: #1a1a1a;
+            transition: fill 0.3s ease;
+        }
+
+        &:hover svg rect {
+            fill: #ff6b00;
+        }
+    }
+
+    .spacer {
+        flex: 1;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
