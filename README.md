@@ -1,11 +1,100 @@
 # React Beer Ecommerce Challenge
 
-This is the root of the Beer Ecommerce Challenge.
+This project contains two parts:
 
-## API
+- `/api`: Node.js backend with Express
+- `/client`: React frontend using Vite + Sass
 
-The API is located in the `api` directory. Check the `README.md` file in the `api` directory for more information.
+## 🔧 Requirements
 
-## Client
+- Node.js (v18+)
+- npm (v9+)
 
-The client is located in the `client` directory. Check the `README.md` file in the `client` directory for more information.
+## 📁 Folder structure
+
+```
+react-beer-ecommerce-challenge/
+├── api/       ← Backend (Express API)
+├── client/    ← Frontend (React app)
+└── README.md
+```
+
+## ▶️ How to run the project
+
+### 📡 Backend (`/api`)
+
+1. Navigate to the `api` directory:
+
+   ```bash
+   cd api
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file based on `.env.sample`:
+
+   ```env
+   PORT=3000
+   API_BASE_URL=http://localhost
+   NODE_ENV=development
+   LOG_DIRECTORY=logs
+   ```
+
+4. Run the server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Run tests:
+
+   ```bash
+   npm run test
+   ```
+
+📌 The API is served at: `http://localhost:3000/api`
+
+### 💻 Frontend (`/client`)
+
+1. Navigate to the `client` directory:
+
+   ```bash
+   cd client
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file:
+
+   ```env
+   VITE_API_BASE_URL=http://localhost:3000
+   ```
+
+4. Start the app:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open in browser:
+
+   ```
+   http://localhost:5173/products
+   ```
+
+📌 The frontend communicates with the backend using the `VITE_API_BASE_URL` defined above.
+
+## 🧪 Features
+
+- Mobile-first UI with Product Listing (PLP) and Product Detail Page (PDP)
+- PDP auto-refreshes price & stock every 5 seconds
+- Add to Cart simulation via `window.alert`
+- Styled using Sass (no CSS frameworks)
