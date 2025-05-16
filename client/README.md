@@ -2,6 +2,12 @@
 
 This is the frontend for the Beer Ecommerce Challenge, built with React, Vite, and Sass.
 
+## Clone the repository
+
+   ```bash
+   git clone https://github.com/licarys/challenge-react-beer-ecommerce-challenge.git
+   ```
+
 ## 🔧 Requirements
 
 - Node.js (v18+)

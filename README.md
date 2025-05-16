@@ -21,6 +21,12 @@ react-beer-ecommerce-challenge/
 
 ## ▶️ How to run the project
 
+### Clone the repository
+
+   ```bash
+   git clone https://github.com/licarys/challenge-react-beer-ecommerce-challenge.git
+   ```
+
 ### 📡 Backend (`/api`)
 
 1. Navigate to the `api` directory:
