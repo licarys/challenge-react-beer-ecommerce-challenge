@@ -8,23 +8,4 @@
     padding: 1.5rem;
     min-height: 100vh;
     background-color: $light-gray-color;
-
-    .welcome-message {
-        margin-top: 1rem;
-        margin-bottom: 1.5rem;
-
-        .subtitle {
-            font-size: 1rem;
-            color: $medium-dark-color;
-            font-weight: 400;
-            margin: 8px 0;
-        }
-
-        .title {
-            font-size: 1.5rem;
-            color: $dark-color;
-            font-weight: 700;
-            margin: 0;
-        }
-    }
 }

@@ -1,0 +1,120 @@
+@use '../styles/variables' as vars;
+
+.pdp-page {
+    .pdp-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .pdp-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        max-height: 240px;
+        margin: 1rem 0;
+    }
+
+    .pdp-title-price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: vars.$dark-color;
+            margin: 0.5rem 0;
+        }
+
+        .pdp-price {
+            color: vars.$primary-color;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+    }
+
+    .pdp-meta {
+        font-size: 14px;
+        color: vars.$medium-gray-color;
+        margin-bottom: 1.75rem;
+    }
+
+    .pdp-title-description {
+        margin: 0.5rem 0;
+        font-size: 14px;
+        font-weight: 700;
+        color: vars.$dark-color;
+    }
+
+    .pdp-description {
+        font-size: 14px;
+        color: vars.$medium-dark-color;
+        line-height: 24px;
+        margin: 1rem 0 1.5rem;
+
+        .read-more {
+            background: none;
+            border: none;
+            color: vars.$primary-color;
+            font-weight: 700;
+            cursor: pointer;
+            padding-left: 0.25rem;
+        }
+    }
+
+    .pdp-title-size {
+        margin: 0.5rem 0 1rem;
+        font-size: 14px;
+        font-weight: 700;
+        color: vars.$dark-color;
+    }
+
+    .pdp-actions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 50px;
+
+        .icon-button {
+            width: 40px;
+            height: 40px;
+            border: 1px solid vars.$primary-color;
+            border-radius: 8px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                height: 40px;
+                width: 40px;
+                transition: ease-in-out 0.2s;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .primary-button {
+            flex: 1;
+            background-color: vars.$primary-color;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            padding: 0.75rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition:all ease-in-out 0.5s;
+
+            &:hover {
+                background-color: white;
+                border: 1px solid vars.$primary-color;
+                color: vars.$primary-color;
+            }
+        }
+    }
+}

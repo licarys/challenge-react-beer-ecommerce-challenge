@@ -1,0 +1,35 @@
+@use '../styles/variables' as vars;
+
+.pdp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+
+  .header-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    img {
+      height: 40px;
+      width: 40px;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .pdp-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: vars.$dark-color;
+  }
+}
