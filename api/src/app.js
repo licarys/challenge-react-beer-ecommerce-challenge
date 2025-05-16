@@ -1,13 +1,12 @@
-import dotenv from 'dotenv';
+import cors from 'cors';
 import express from 'express';
 import fs from 'fs';
 import routes from './routers/index.router.js';
 import logger from './middlewares/logger.js';
 import morgan from 'morgan';
+import { config } from './config.js';
 import { errorHandler, notFound } from './middlewares/error-handler.js';
 import { getProjectPath } from './utils/paths.js';
-
-dotenv.config();
 
 const app = express();
 
@@ -16,7 +15,13 @@ const accessLogStream = fs.createWriteStream(
   { flags: 'a' }
 );
 
+const corsOptions = {
+  origin: config.allowedClientUrl,
+  optionsSuccessStatus: 200,
+};
+
 app.use(express.json());
+app.use(cors(corsOptions));
 app.use(morgan('dev'));
 app.use(morgan('combined', { stream: accessLogStream }));
 app.use(logger);
