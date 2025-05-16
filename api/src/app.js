@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 import express from 'express';
 import fs from 'fs';
-import indexRouter from './routers/index.router.js';
+import routes from './routers/index.router.js';
 import logger from './middlewares/logger.js';
 import morgan from 'morgan';
 import { errorHandler, notFound } from './middlewares/errorHandler.js';
@@ -21,7 +21,7 @@ app.use(morgan('dev'));
 app.use(morgan('combined', { stream: accessLogStream }));
 app.use(logger);
 
-app.use('/api', indexRouter);
+app.use('/api', routes);
 
 app.use(notFound);
 app.use(errorHandler);
