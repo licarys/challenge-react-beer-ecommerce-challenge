@@ -4,4 +4,6 @@ export default {
         "^.+\\.js$": "babel-jest"
     },
     verbose: true,
+    coverageDirectory: "coverage",
+    collectCoverage: true
 };

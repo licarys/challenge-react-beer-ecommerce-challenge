@@ -4,7 +4,7 @@ import fs from 'fs';
 import routes from './routers/index.router.js';
 import logger from './middlewares/logger.js';
 import morgan from 'morgan';
-import { errorHandler, notFound } from './middlewares/errorHandler.js';
+import { errorHandler, notFound } from './middlewares/error-handler.js';
 import { getProjectPath } from './utils/paths.js';
 
 dotenv.config();
