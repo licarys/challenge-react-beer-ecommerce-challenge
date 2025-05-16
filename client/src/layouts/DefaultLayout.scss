@@ -1,5 +1,5 @@
+@use '../styles/variables' as vars;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-@import '../styles/variables';
 
 .default-layout {
     font-family: 'Inter', sans-serif;
@@ -7,5 +7,5 @@
     margin: 0 auto;
     padding: 1.5rem;
     min-height: 100vh;
-    background-color: $light-gray-color;
+    background-color: vars.$light-gray-color;
 }

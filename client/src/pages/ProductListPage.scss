@@ -1,11 +1,11 @@
-@import '../styles/variables';
+@use '../styles/variables' as vars;
 
 .product-page {
   .product-page-title {
     margin-bottom: 1rem;
     font-size: 18px;
     font-weight: 700;
-    color: $dark-color;
+    color: vars.$dark-color;
   }
 
   .product-grid {
@@ -20,14 +20,14 @@
 
     .subtitle {
       font-size: 1rem;
-      color: $medium-dark-color;
+      color: vars.$medium-dark-color;
       font-weight: 400;
       margin: 8px 0;
     }
 
     .title {
       font-size: 1.5rem;
-      color: $dark-color;
+      color: vars.$dark-color;
       font-weight: 700;
       margin: 0;
     }
