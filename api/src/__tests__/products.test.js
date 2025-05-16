@@ -21,4 +21,26 @@ describe('GET /api/products', () => {
     expect(product).toHaveProperty('skus');
     expect(Array.isArray(product.skus)).toBe(true);
   });
+
+  it('should return an item if the id is valid', async () => {
+    const response = await request(app).get('/api/products/127');
+
+    expect(response.status).toBe(200);
+    expect(response.body).toHaveProperty('id');
+    expect(response.body).toHaveProperty('brand');
+    expect(response.body).toHaveProperty('image');
+    expect(response.body).toHaveProperty('style');
+    expect(response.body).toHaveProperty('substyle');
+    expect(response.body).toHaveProperty('abv');
+    expect(response.body).toHaveProperty('origin');
+    expect(response.body).toHaveProperty('information');
+    expect(response.body).toHaveProperty('skus');
+    expect(Array.isArray(response.body.skus)).toBe(true);
+  });
+
+  it('should return 404 if the id is invalid', async () => {
+    const response = await request(app).get('/api/products/000');
+
+    expect(response.status).toBe(404);
+  });
 });

@@ -15,9 +15,22 @@ export const getProductsController = function (req, res) {
       };
     });
 
-
     res.status(200).json(enhanced);
   } catch (error) {
     throw new Error('Failed to get products');
+  }
+};
+
+export const getProductByIdController = function (req, res) {
+  try {
+    const product = products.find((p) => String(p.id) === req.params.id);
+
+    if (!product) {
+      res.status(404).json({ message: 'Product not found' });
+    }
+
+    res.status(200).json(product);
+  } catch (error) {
+    throw new Error('Failed to get product');
   }
 };
