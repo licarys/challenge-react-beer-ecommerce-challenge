@@ -2,7 +2,7 @@ export default [
   {
     id: 127,
     brand: "Modelo Especial",
-    image: "/products/modelo-especial.jpeg",
+    image: "/products/modelo-especial.png",
     style: "Lager",
     substyle: "Light Lager",
     abv: "4.4%",
@@ -46,7 +46,7 @@ export default [
   {
     id: 743,
     brand: "Corona Premier",
-    image: "/products/corona.jpg",
+    image: "/products/corona.png",
     style: "Lager",
     substyle: "Mexican Lager",
     abv: "4.0%",
@@ -66,7 +66,7 @@ export default [
   {
     id: 841,
     brand: "Budweiser",
-    image: "/products/budweiser.jpg",
+    image: "/products/budweiser.png",
     style: "Lager",
     substyle: "American Lager",
     abv: "5%",
